@@ -6,9 +6,9 @@ class SpecialOfferManager
     ]
   end
 
-  def best_offer(sku_list)
+  def best_offer(offers, sku_list)
 
-    sorted_offers = special_offer_list.sort_by { |offer| offer.saving(sku_list) }
+    sorted_offers = offers.sort_by { |offer| offer.saving(sku_list) }
 
     return nil if sorted_offers.empty?
     return nil if sorted_offers.last.saving(sku_list) == BigDecimal.new(0)
