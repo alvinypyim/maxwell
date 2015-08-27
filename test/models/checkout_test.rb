@@ -29,6 +29,12 @@ class CheckoutTest < ActiveSupport::TestCase
     assert_equal BigDecimal.new(249).to_s, @checkout.total.to_s
   end
 
+  test 'calculate the total with a bulk offer applied' do
+    ([ :atv, :ipd, :ipd, :atv, :ipd, :ipd, :ipd ]).each { |sku| @checkout.scan sku }
+
+    assert_equal BigDecimal.new(2718.95, 6).to_s, @checkout.total.to_s
+  end
+
   test 'calculate the total with another offer applied' do
     ([ :mbp, :vga, :ipd ]).each { |sku| @checkout.scan sku }
 

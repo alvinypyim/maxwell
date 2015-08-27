@@ -2,6 +2,7 @@ class SpecialOfferManager
   def special_offer_list
     [
       SpecialOffer.new(BigDecimal.new(219), [ :atv ] * 3),
+      BulkSpecialOffer.new(BigDecimal.new(499.99, 5), 5, :ipd),
       SpecialOffer.new(BigDecimal.new(1399.99, 6), [ :mbp, :vga ]),
     ]
   end
