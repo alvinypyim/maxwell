@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is about building a checkout system.  This is written using Ruby on
+Rails framework only for testing purpose.
 
-Things you may want to cover:
+Depending on how your environment is configured, the deployment procedures
+might vary.  Generally, it includes the steps as follows.
 
-* Ruby version
+* Go to the project root
 
-* System dependencies
+* <tt>rvm install 2.2.1</tt> to install the ruby version using <tt>rvm</tt>
 
-* Configuration
+* <tt>bundle</tt> to install the gem dependencies
 
-* Database creation
+There is no command line interface implemented.  However, there are tests
+created to verify the correctnes of the implemented logic.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To run the test suitem run <tt>rake test</tt>
